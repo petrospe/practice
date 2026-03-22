@@ -1,31 +1,17 @@
-# Αναφορά Διορθώσεων & Παρατηρήσεων 
+**ΠΑΡΑΤΗΡΗΣΕΙΣ**
 
----
+**1)** Κάτω απο τη γραμμη 43 πρέπει να μπει _$insertrecord->timemodified=...;_ απαιτείται απο την προδιαγραφή του table _mdl\_local\_practice_ ωστε να γίνει ενα εστω στοιχειώδες insert στη βάση στο αρχείο _/db/install.xml_. Για να δουλεψει έστω το submit
 
-### 1.
-Κάτω απο τη γραμμη 43 πρέπει να μπει 
-$insertrecord->timemodified=...; απαιτείται απο την προδιαγραφή του table mdl_local_practice ωστε να γίνει ενα εστω στοιχειώδες insert στη βάση στο αρχείο /db/install.xml. Για να δουλεψει έστω το submit
+**2)** Η γραμμή r_edirect(new moodle\_url('/local/practice/lndex.php'));_ είναι λάθος και δεν θα επιστρέψει τη σωστή σελίδα _index.php_ και όχι _lndex.php_
 
-### 2.
-Η γραμμή redirect(new moodle_url('/local/practice/lndex.php')); είναι λάθος και δεν θα επιστρέψει τη σωστή σελίδα index.php και όχι lndex.php
+**3)** Εαν δεν υπάρχει κάποιος λόγος ωστε να εισαγουμε χθεσινή ημέρομηνία στο _timecreated_, τότε είναι λάθος το _time()-86400_.
 
-### 3.
-Εαν δεν υπάρχει κάποιος λόγος ωστε να εισαγουμε χθεσινή ημέρομηνία στο timecreated, τότε είναι λάθος το time()-86400.
+**4)** Εισαγουμε το _firstname_ στο _lastname_ στο _index.php_. 
 
-### 4.
-Εισαγουμε το firstname στο lastname στο index.php.
+**5)** Εδω υπάρχει λάθος και στο _main.mustache_ template όπου ενω το column name ειναι Lastname φέρνει το firstname.
 
+**6)** Δεν ερχεται το _timecreated_ στο template, γιατι  δεν όριζεται στο αρχείο _classes/output/main.php_
 
-### 5.
-Εδω υπάρχει λάθος και στο main.mustache template όπου ενω το column name ειναι Lastname φέρνει το firstname.
+**7)** Στο _main.mustache_ template το table εχει tag αντι _,_ όμως ακολουθει με και
 
-### 6.
-Δεν ερχεται το timecreated στο template, γιατι  δεν όριζεται στο αρχείο classes/output/main.php
-
-### 7.
-Στο main.mustache template το table εχει tag <head> αντι <thead>, όμως ακολουθει με <tbody> και <tfoot>
-
-### 8.
-Το πεδίο email δεν ελεγχεται πουθενα. H class practice_form κανει extend την abstract class moodleform η οποία έχει την μεθοδο validate που μπορουμε να τη χρησιμοποιήσουμε για το email.
-
----
+**8)** Το πεδίο _email_ δεν ελεγχεται πουθενα. H _class practice\_form_ κανει _extend_ την _abstract class moodleform_ η οποία έχει την μεθοδο _validate_ που μπορουμε να τη χρησιμοποιήσουμε για το _email_.
