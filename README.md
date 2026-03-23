@@ -12,6 +12,6 @@
 
 **6)** Δεν ερχεται το _timecreated_ στο template, γιατι  δεν όριζεται στο αρχείο _classes/output/main.php_
 
-**7)** Στο _main.mustache_ template το table εχει tag "<HEAD>" αντι "<THEAD>"
+**7)** Στο _main.mustache_ template το table εχει tag HEAD αντι THEAD
 
 **8)** Το πεδίο _email_ δεν ελεγχεται πουθενα. H _class practice\_form_ κανει _extend_ την _abstract class moodleform_ η οποία έχει την μεθοδο _validate_ που μπορουμε να τη χρησιμοποιήσουμε για το _email_.
