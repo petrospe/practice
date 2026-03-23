@@ -15,3 +15,5 @@
 **7)** Στο _main.mustache_ template το table εχει tag head αντι thead
 
 **8)** Το πεδίο _email_ δεν ελεγχεται πουθενα. H _class practice\_form_ κανει _extend_ την _abstract class moodleform_ η οποία έχει την μεθοδο _validate_ που μπορουμε να τη χρησιμοποιήσουμε για το _email_.
+
+**9)** Στο αρχείο _classes/output/main.php_ η μεταβλητή $timecreated πέρνει τιμή από $record->timemodified το οποίο προκαλει σύγχυση σχετικά με το πεδίο που θέλουμε να δείχνουμε στο frontend, υποθέτουμε ότι το σωστό είναι το timecreated γιατί ετσι ορίζεται και στο template. Οπότε στη γραμμή _$timecreated=date('d/m/Y H:i:s',$record->timemodified);_ ορίζεται λαθος πεδίο.
